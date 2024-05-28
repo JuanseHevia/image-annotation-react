@@ -1,0 +1,7 @@
+backend/.env
+frontend/.env
+*.db
+backend/migrations/
+*/__pycache__
+notebooks/
+.vscode/
