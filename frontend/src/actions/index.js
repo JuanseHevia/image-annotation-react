@@ -7,7 +7,6 @@ export const addAnnotation = (annotation) => {
   }
 };
 
-
 export const setImage = (imageData) => ({
   type: constants.SET_IMAGE,
   payload: imageData,
@@ -46,7 +45,7 @@ export const fetchAnnotations = (imageId) => async (dispatch) => {
   catch (error) {
     console.error('Fetch annotations failed:', error);
   }
-}
+};
 
 export const setAnnotations = (annotations) => ({
   type: constants.SET_ANNOTATIONS,
@@ -75,8 +74,7 @@ export const clearAnnotations = (imageId) => async (dispatch) => {
     type: constants.CLEAR_ANNOTS,
   })
 
-}
-
+};
 
 export const saveAnnotations = (imageId, unsavedAnnotations) => async (dispatch) => {
   // TODO:
@@ -109,4 +107,4 @@ export const saveAnnotations = (imageId, unsavedAnnotations) => async (dispatch)
     type: constants.SAVE_ANNOTS,
   });
 
-}
+};
