@@ -15,7 +15,8 @@
     "react-dom": "^18",
     "react-redux": "^9.1.2",
     "redux": "^5.0.1",
-    "redux-thunk": "^3.1.0"
+    "redux-thunk": "^3.1.0",
+    "sass": "^1.77.4"
   },
   "devDependencies": {
     "eslint": "^8",
