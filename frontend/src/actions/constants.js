@@ -1,6 +1,7 @@
 export const ADD_ANNOT = "ADD_ANNOT";
 export const FETCH_IMG_URL = "GET_IMAGE";
 export const SET_IMAGE = "SET_IMAGE";
+export const UPLOAD_IMAGE = "UPLOAD_IMAGE";
 
 export const SAVE_ANNOTS = "SAVE_ANNOTATIONS";
 export const CLEAR_ANNOTS = "CLEAR_ANNOTATIONS";

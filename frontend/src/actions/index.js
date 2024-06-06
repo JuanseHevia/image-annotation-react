@@ -7,6 +7,23 @@ export const addAnnotation = (annotation) => {
   }
 };
 
+export const uploadImage = (url, filename) => async (dispatch) => {
+
+  const response = await fetch('http://127.0.0.1:5000/images',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
+      body: JSON.stringify({ url: url, filename: filename }),
+    });
+
+  if (!response.ok) {
+    console.error('Failed to upload image:', response);
+  }
+};
+
 export const setImage = (imageData) => ({
   type: constants.SET_IMAGE,
   payload: imageData,
@@ -69,7 +86,7 @@ export const clearAnnotations = (imageId) => async (dispatch) => {
   if (!response.ok) {
     console.error('Failed to clear annotations:', response);
   }
-  
+
   dispatch({
     type: constants.CLEAR_ANNOTS,
   })
@@ -91,13 +108,13 @@ export const saveAnnotations = (imageId, unsavedAnnotations) => async (dispatch)
 
   // TODO: adapt the methods to allow for saving annotation batches
   const response = await fetch('http://127.0.0.1:5000/annotations', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
-      body: JSON.stringify({stored_data : annotations}),
-    });
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    },
+    body: JSON.stringify({ stored_data: annotations }),
+  });
 
   if (!response.ok) {
     console.error('Failed to save annotations:', response);

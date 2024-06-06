@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Component } from "react";
 import { addAnnotation, fetchImage, fetchAnnotations } from '../actions/index';
 import { connect } from "react-redux";
-import styles from './ImageComponent.module.css';
+import styles from './ImageComponent.module.scss';
 
 
 const ImageComponent = (props) => {
